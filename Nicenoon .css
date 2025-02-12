@@ -1,0 +1,663 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: font1;
+    src: url(./fonts/IBM_Plex_Mono/IBMPlexMono-BoldItalic.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(./fonts/IBM_Plex_Mono/Parkinsans/static/Parkinsans-Regular.ttf);
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(201, 208, 214);
+}
+#main{
+    width: 100%;
+    height: 5vw;
+    padding: 0px 3.5vw;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pair1{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav h1{
+    font-family: font2;
+    font-size: 2.3rem;
+}
+nav i{
+    font-size: 2.6rem;
+    font-weight: 300;
+    animation: rotate360 5s linear infinite;
+}
+.hanjala i{
+    display: none;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.pair1 button{
+    font-size: 1.2vw;
+    border: 1px solid black;
+    padding: 6px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.pair1 .r1{
+    font-weight: 600;
+    position: relative;
+}
+
+@keyframes rotate360{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.pair1 .r1::after{
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    top: 72%;
+    left: 18%;
+}
+.pair1 .r1:hover::after{
+   background-color: white;
+   transition: all 0.5s linear;
+}
+.pair1 button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.5s linear;
+}
+
+.zudo{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 3.5vw;
+    padding-bottom: 4rem;
+}
+.part1{
+    width: 70vw;
+    font-size: 7rem;
+    line-height:6.5rem;
+    padding-top: 2rem;
+}
+
+ #sem i{
+    font-size: 5.5rem;
+    display: inline-block;
+    animation: move360 5s linear infinite;
+}
+
+
+@keyframes move360{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.part2{
+    font-family: Helvetica;
+    font-size: 18px;
+    width: 30vw;
+    padding-left: 6rem;
+}
+.part2 button{
+    border: 1px solid black;
+    padding: 12px 18px;
+}
+.btn button{
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    margin-top: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn i{
+    padding-left: 1.3rem;
+}
+.btn button:hover{
+    border-radius: 4rem;
+}
+.super{
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+.super::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    left:10%;
+    top: 73%;
+    transition: all 0.7s ease-out;
+}
+.super:hover::after{
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 1.8rem;
+    }
+
+    .pair1 {
+        gap: 15px;
+    }
+
+    .pair1 button {
+        font-size: 1rem;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .part1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+        width: 100%;
+    }
+
+    .part2 {
+        width: 90%;
+        padding-left: 0;
+    }
+}
+
+
+.images {
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+}
+.images::-webkit-scrollbar{
+    display: none;
+}
+.calm1{
+    position: absolute;
+}
+.calm1 img{
+    width:26vw;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 25px;
+    border-radius: 10vw;
+}
+
+.con-text{
+    padding: 0px 3.5vw;
+    margin-top: 6vh;
+    padding-bottom: 1.5vw;
+}
+.con-text h1{
+  font-size: 1.6vw;
+  /* line-height: 4.3vh; */
+ 
+}
+.lemon{
+    padding: 0px 3.5vw  ;
+    transition: all 5s ease-in ;
+}
+.lemon button{
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 14px;
+    margin-top: 1;
+}
+.lemon button:hover{
+    border-radius: 4rem;
+}
+.lemon i{
+    padding-left: 1.3rem;
+}
+
+.sumo h1{
+   text-transform: uppercase;
+}
+.texts{
+    width: 100%;
+    height: 35vw;
+    padding: 0px 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    
+}
+.texts p{
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+.texts h1{
+    font-size: 10rem;
+    line-height: 10rem;
+    font-family: font2;
+    font-weight: 600;
+}
+
+.semon{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px 7vw;
+    transition: all 5s ease-in ;
+   
+}
+.semon button{
+    border-radius: 10px;
+    background-color:transparent;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 14px;
+}
+.semon button:hover{
+    border-radius: 4rem;
+}
+.semon i{
+    padding-left: 1.3rem;
+}
+.sem{
+    background-color: rgb(175, 194, 67);
+    padding: 14px 22px;
+    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 500;
+    position: absolute;
+     right: 28%;
+     top: 79%;
+     transform: rotate(-15deg);
+}
+.rect{
+    cursor: pointer;
+    margin-bottom: 7em;
+}
+.juno:hover{
+    border-radius: 140px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.04);
+}
+rect{
+    overflow: hidden;
+}
+.juno{
+    background-image: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/67a2770408b55e96ed84f1de_SALUD_Viltje_NaN-min.jpg);
+    background-size: cover;
+    transition: all 0.4s ease-in-out;
+    background-position: center center;
+}
+
+.juno .box{
+    background-image: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/67a0cba197bd4190597852c8_SALUD_Header-Nan-min-p-2000.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: none;
+}
+
+
+.juno:hover .box {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 50px;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sulo{
+    font-weight: 400;
+    border: 1px solid black;
+    padding: 1px 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 1.7em;
+}
+
+.photo1{
+    background-image: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/679ce0e99c825524cbd5cd04_MAX_Header-NaN-min.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    transition: all 0.4s ease-in-out;
+}
+.photo1:hover{
+    transform: scale(1.02);
+    transition: all 0.4s ease-in-out;
+    border-radius: 110px;
+}
+.photo1 img{
+   display: none;
+}
+.photo1:hover img {
+    display: block;
+    animation: fadeout 0.5s ease-in-out;
+}
+/* Smooth fade-in animation */
+@keyframes fadeout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.photo2{
+    background-image: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/67a0c6a5ca51cabc4ef6ca99_CS_10302941-p-2000.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    transition: all 0.4s ease-in-out;
+}
+.photo2:hover{
+    transform: scale(1.03);
+    transition: all 0.4s ease-in-out;
+    border-radius: 150px;
+}
+.photo2 img{
+   display: none;
+}
+.photo2:hover img {
+    display: block;
+    animation: fade 0.5s ease-in-out;
+}
+/* Smooth fade-in animation */
+@keyframes fade{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.ctn {
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 12px 18px;
+    border-radius: 16px;  
+    position: relative;
+    transition: all 0.5s ease-in-out; 
+}
+
+.ctn i {
+    padding-left: 1.3rem;
+}
+
+.ctn:hover {
+    border-radius: 4rem; 
+}
+
+.ctn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    left: 11%;
+    top: 73%;
+    transition: all 0.7s ease-out;
+}
+
+.ctn:hover::after {
+    width: 50%;
+}
+
+
+.gtn {
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 12px 18px;
+    border-radius: 16px;  
+    position: relative;
+    transition: all 0.3s ease-in-out; 
+    background-color: black;
+    color: white;
+}
+
+.gtn i {
+    padding-left: 1.3rem;
+}
+
+.gtn:hover {
+    border-radius: 4rem; 
+}
+
+.gtn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(7, 7, 7);
+    left: 11%;
+    top: 73%;
+    transition: all 0.7s ease-out;
+}
+
+.gtn:hover::after {
+    width: 50%;
+}
+
+.move1 {
+    transition: border-radius 0.5s ease-in-out;
+}
+
+.move1 .p1{
+    background: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/64cac464ae61273a7c937ded_BRAND%20STORY_Over-Nan-p-500.jpg);
+    background-position: center;
+    background-size: cover;
+   transition: all 0.5s ease-out;
+}
+.move1 .p2{
+    background-color: #AA81B7;
+    transition: all 0.5s ease-out;
+}
+
+.move1:hover .p1,
+.move1:hover .p2 {
+    border-radius: 70px; /* Kam border-radius hone par smooth effect */
+    transition: border-radius 0.5s ease-in-out;
+}
+
+
+.move1 .q1{
+    background: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/64e51e8b3be191fdc49c321d_NaN_Merkidentiteit.jpg);
+    background-position: center;
+    background-size: cover;
+   transition: all 0.5s ease-out;
+}
+.move1 .q2{
+    background-color: #10100F;
+    transition: all 0.5s ease-out;
+}
+
+.move1:hover .q1,
+.move1:hover .q2 {
+    border-radius: 70px; 
+    transition: border-radius 0.5s ease-in-out;
+}
+
+
+.move1 .r1{
+    background: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/64e51e7766e8d5682bf6ee25_NaN_Webdesign.jpg);
+    background-position: center;
+    background-size: cover;
+   transition: all 0.5s ease-out;
+}
+.move1 .r2{
+    background-color: #36A96A;
+    transition: all 0.5s ease-out;
+}
+
+.move1:hover .r1,
+.move1:hover .r2 {
+    border-radius: 70px; 
+    transition: border-radius 0.5s ease-in-out;
+}
+
+.move1 .s1{
+    background: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/64bbb43e292b8b8352068a48_NaN_A%20la%20Carte.jpg);
+    background-position: center;
+    background-size: cover;
+   transition: all 0.5s ease-out;
+}
+.move1 .s2{
+    background-color: #FA8A58;
+    transition: all 0.5s ease-out;
+}
+
+.move1:hover .s1,
+.move1:hover .s2 {
+    border-radius: 70px; 
+    transition: border-radius 0.5s ease-in-out;
+}
+
+.some-text h1{
+    font-size: 26px;
+}
+
+.mtn {
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 12px 18px;
+    border-radius: 16px;  
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    background-color: #10100F;
+    color: white; 
+}
+
+.mtn i {
+    color: white;
+    padding-left: 1.3rem;
+}
+
+.mtn:hover {
+    border-radius: 4rem; 
+}
+
+.mtn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(250, 247, 247);
+    left: 15%;
+    top: 73%;
+    transition: all 0.7s ease-out;
+}
+
+.mtn:hover::after {
+    width: 40%;
+}
+.deco-rotate{
+    animation: roatateemo 14s infinite linear;
+}
+@keyframes roatateemo{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.proimg{
+    background: url(https://cdn.prod.website-files.com/6454cbf2dcc426c6ec47ef06/64cabd4824cecf2c23abed79_BRAND%20STORY%20SESSIES_Home-Nan-p-2000.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+
+.laila img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.laila img{
+    animation: roatatelelo 14s infinite linear;
+}
+@keyframes roatatelelo{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.febric{
+    position: relative;
+    transition: all 0.7s ease-out;
+}
+.febric i {
+    color: white;
+    padding-left: 1.3rem;
+}
+
+.febric:hover {
+    border-radius: 4rem; 
+}
+
+.febric::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(228, 222, 222);
+    left: 16%;
+    top: 73%;
+    transition: all 0.7s ease-out;
+}
+
+.febric:hover::after {
+    width: 42%;
+}
